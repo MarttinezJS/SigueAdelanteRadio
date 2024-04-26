@@ -1,5 +1,22 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Html from "../layouts/HtmlLayout.astro";
+import BlockLayout from "../layouts/BlockLayout.astro";
 ---
 
-<Layout title="Welcome to Astro." />
+<Html title="Welcome to Astro.">
+  <div class="h-screen grid grid-cols-3">
+    <BlockLayout>
+      <div class="border-1 border-yellow-200"></div>
+      <div class="border-1 border-yellow-200"></div>
+    </BlockLayout>
+    <BlockLayout>
+      <div class="border-1 border-yellow-200"></div>
+      <div class="border-1 border-yellow-200 row-span-3"></div>
+      <div class="border-1 border-yellow-200"></div>
+    </BlockLayout>
+    <BlockLayout>
+      <div class="border-1 border-yellow-200"></div>
+      <div class="border-1 border-yellow-200"></div>
+    </BlockLayout>
+  </div>
+</Html>
