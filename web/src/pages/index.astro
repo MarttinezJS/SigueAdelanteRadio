@@ -1,22 +1,46 @@
 ---
 import Html from "../layouts/HtmlLayout.astro";
+import { Image } from "astro:assets";
 import BlockLayout from "../layouts/BlockLayout.astro";
+import logo from "../images/Logo-Sigue-Adelante-Header-1-1-scaled.jpg";
+import { MainMenu } from "../components/base/MainMenu";
 ---
 
 <Html title="Welcome to Astro.">
-  <div class="h-screen grid grid-cols-3">
-    <BlockLayout>
-      <div class="border-1 border-yellow-200"></div>
-      <div class="border-1 border-yellow-200"></div>
-    </BlockLayout>
-    <BlockLayout>
-      <div class="border-1 border-yellow-200"></div>
-      <div class="border-1 border-yellow-200 row-span-3"></div>
-      <div class="border-1 border-yellow-200"></div>
-    </BlockLayout>
-    <BlockLayout>
-      <div class="border-1 border-yellow-200"></div>
-      <div class="border-1 border-yellow-200"></div>
-    </BlockLayout>
+  <div class="h-screen columns-3 gap-0 bg-yellow-background">
+    <div class="h-full auto-rows-max grid">
+      <div class="border-1 border-primary p-2 h-auto">
+        <iframe
+          src="http://192.168.1.81:3000/public/milanesa/history?theme=light"
+          allowtransparency="true"
+          style="width: 100%; min-height: 300px; border: 0;"></iframe>
+        <iframe
+          src="http://192.168.1.81:3000/public/milanesa/embed"
+          allowtransparency="false"
+          style="width: 100%; min-height: 200px; border: 0;"></iframe>
+      </div>
+      <div class="border-1 border-primary h-auto"></div>
+    </div>
+    <div class="h-full">
+      <div class="border-1 border-primary p-10">
+        <MainMenu client:visible />
+      </div>
+      <div
+        class="border-1 border-primary content-center justify-center grid bg-primary"
+      >
+        <Image
+          src={logo}
+          title="Sigue adelante radio"
+          alt="main logo"
+          height="500"
+          width="500"
+        />
+      </div>
+      <div class="border-1 border-primary"></div>
+    </div>
+    <div class="h-full">
+      <div class="border-1 border-primary"></div>
+      <div class="border-1 border-primary"></div>
+    </div>
   </div>
 </Html>
