@@ -8,8 +8,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#FFBE24",
-        "yellow-background": "#FFECB3",
+        primary: "#FFBE25",
+        "primary-black": "",
+        secondary: "#826754",
+        "yellow-background": "#FFF2CC",
       },
     },
   },
