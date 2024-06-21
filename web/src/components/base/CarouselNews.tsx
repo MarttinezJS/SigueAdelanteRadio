@@ -33,8 +33,8 @@ export const CarouselNews = () => {
       showThumbs={false}
       className="flex items-center"
     >
-      {news.map((value) => (
-        <div className="flex justify-center">
+      {news.map((value, i) => (
+        <div className="flex justify-center" key={i}>
           <CardNews {...value} imageUrl={value.image} />
         </div>
       ))}

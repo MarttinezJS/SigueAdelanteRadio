@@ -9,7 +9,7 @@ import {
 import { IconText } from "../atomics";
 export const MainMenu = () => {
   return (
-    <div className="p-10">
+    <div className="m-10 border-2 w-full rounded-lg bg-yellow-background p-10">
       <Listbox
         selectedKeys={"home"}
         aria-label="Listbox Variants"

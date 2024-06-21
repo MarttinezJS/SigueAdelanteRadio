@@ -13,7 +13,7 @@ interface CardNewsProps {
 }
 export const CardNews = ({ imageUrl, text, title }: CardNewsProps) => {
   return (
-    <Card className="max-w-[400px] justify-center flex xl:my-10">
+    <Card className="max-w-[400px] justify-center flex xl:my-10 bg-yellow-background">
       <CardHeader className="justify-center">
         <p className="text-md">{title}</p>
       </CardHeader>
