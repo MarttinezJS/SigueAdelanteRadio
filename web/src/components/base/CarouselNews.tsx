@@ -26,7 +26,13 @@ const news: New[] = [
 
 export const CarouselNews = () => {
   return (
-    <Carousel infiniteLoop autoPlay stopOnHover showThumbs={false}>
+    <Carousel
+      infiniteLoop
+      autoPlay
+      stopOnHover
+      showThumbs={false}
+      className="flex items-center"
+    >
       {news.map((value) => (
         <div className="flex justify-center">
           <CardNews {...value} imageUrl={value.image} />
