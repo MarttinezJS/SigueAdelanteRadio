@@ -7,6 +7,7 @@ import {
   MainMenu,
   CarouselNews,
   CarouselPartners,
+  EventsComponent,
 } from "../components/base";
 ---
 
@@ -44,7 +45,9 @@ import {
         <div class="border-1 border-primary h-1/2">
           <CarouselPartners client:visible />
         </div>
-        <div class="border-1 border-primary h-1/2"></div>
+        <div class="border-1 border-primary h-1/2 overflow-y-scroll">
+          <EventsComponent client:visible />
+        </div>
       </div>
     </div>
   </div>
